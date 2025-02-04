@@ -1,0 +1,71 @@
+ /* Font Family */
+ $sub-font: 'GmarketSansMedium';
+ $primary-kr: 'Noto Sans KR';
+
+ /* Font Size */
+ $body-xs-small: 12px;
+ $body-small: 14px;
+ $body-mid: 16px;
+ $body-big: 20px;
+ $title-point-small: 20px;
+ $title-point-mid: 24px;
+ $title-point-big: 32px;
+ $body-xs-small-tablet: 10px;
+ $body-small-tablet: 12px;
+ $body-mid-tablet: 14px;
+ $body-big-tablet: 18px;
+ $title-point-small-tablet: 18px;
+ $title-point-mid-tablet: 22px;
+ $title-point-big-tablet: 28px;
+
+ /* Font Weight */
+ $weight-400: 400;
+ $weight-500: 500;
+ $weight-700: 700;
+
+ /* Line Height */
+ $body-line-height: 140%;
+ $title-line-height: 120%;
+
+ /* Color */
+ $blue: #004C97;
+ $dark-gray: #191919;
+ $light-gray: #B0B0B0;
+ $black: #000000;
+ $white: #ffffff;
+ $light-blue: rgba(67, 162, 255, 0.2);
+ $cloud-white: rgba(105, 112, 248, 0.08);
+
+ /* Box-Shadow */
+ $box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
+
+ /* Width */
+ $content-max-width: 1440px;
+
+ /* Padding */
+ $nomal-padding: 24px;
+ $content-padding: 80px 24px;
+ $btn-padding: 24px;
+ $badge-padding: 4px 8px;
+ $li-padding: 8px 24px;
+ $nomal-padding-tablet: 16px;
+ $content-padding-tablet: 80px 16px;
+ $btn-padding-tablet: 16px;
+ $li-padding-tablet: 8px 16px;
+ $badge-padding-tablet: 2px 8px;
+
+/* 분기점 */
+// 모바일
+$breakpoint-mobile: 375px;
+
+// 모바일에서 태블릿
+$breakpoint-tabletToMobile: 767px;
+
+// 태블릿
+$breakpoint-tablet: 768px;
+
+// 태블릿에서 데스크탑
+$breakpoint-desktopToTablet: 1439px;
+
+// 데스크탑
+$breakpoint-desktop: 1440px;

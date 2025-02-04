@@ -1,0 +1,1011 @@
+@charset "UTF-8";
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap");
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Font Family */
+/* Font Size */
+/* Font Weight */
+/* Line Height */
+/* Color */
+/* Box-Shadow */
+/* Width */
+/* Padding */
+/* 분기점 */
+/* Font Family */
+/* Font Size */
+/* Font Weight */
+/* Line Height */
+/* Color */
+/* Box-Shadow */
+/* Width */
+/* Padding */
+/* 분기점 */
+/* Web Font */
+@font-face {
+  font-family: "GmarketSansMedium";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Noto Sans KR";
+  font-size: 16px;
+  line-height: 140%;
+  font-weight: 400;
+  color: #191919;
+}
+
+/* #### 공통 영역 스타일 #### */
+.wrap {
+  max-width: 1440px;
+  width: 100%;
+  padding: 80px 24px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.title {
+  font-family: "GmarketSansMedium";
+  font-weight: 700;
+  font-size: 24px;
+  color: #004C97;
+}
+
+.sub-title {
+  font-family: "GmarketSansMedium";
+  font-size: 20px;
+  margin-top: 16px;
+}
+
+/* 뱃지 영역 */
+.badge {
+  padding: 4px 8px;
+  background-color: #004C97;
+  border-radius: 10px;
+  color: #ffffff;
+  font-size: 12px;
+}
+
+/* 검색창 영역 */
+form {
+  position: relative;
+  width: 380px;
+  margin: 0 auto;
+}
+form .search-txt {
+  padding-right: 50px;
+  width: 380px;
+  height: 56px;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  position: relative;
+}
+form .input-ani {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  background-color: #191919;
+  bottom: 0;
+  left: 0;
+  transition: 0.5s;
+  animation: searchani 0.8s 0.5s linear forwards;
+}
+form .btn-search {
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-image: url("../img/search-icon.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  border: none;
+  background-color: transparent;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  opacity: 0;
+  animation: searchbtn 2s 0.5s linear forwards;
+}
+
+/* 검색 X 버튼 숨기기 */
+[type=search]::-webkit-search-cancel-button,
+[type=search]::-webkit-search-results-button {
+  display: none;
+}
+
+/* #### 헤더 영역 CSS ####*/
+#header {
+  width: 100%;
+  background-color: #004C97;
+  font-weight: 500;
+}
+#header .header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0;
+  width: 100%;
+  height: 81px;
+  color: #ffffff;
+}
+#header .header .menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+#header .header .menu li {
+  padding: 8px 24px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+#header .header .menu li:hover {
+  animation: rotate 1.5s 0.5s linear;
+  transform: scale(1.2);
+}
+#header .header .menu li a {
+  text-decoration: none;
+  color: #ffffff;
+}
+#header .header .login {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+#header .header .login a {
+  color: #ffffff;
+  text-decoration: none;
+  padding: 8px 24px;
+}
+#header .header .drawer {
+  display: none;
+}
+#header .mobile-nav {
+  display: none;
+}
+
+/* #### Section - visual ####*/
+.visual {
+  padding: 0;
+  width: 100%;
+  min-height: calc(100vh - 81px);
+  background-image: url("../img/main-bg.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  display: flex;
+  justify-content: center;
+}
+.visual .visual-title {
+  transform: translateY(220.5px);
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.visual .visual-title p {
+  font-family: "GmarketSansMedium";
+  line-height: 120%;
+}
+.visual .visual-title p:first-child {
+  font-weight: 700;
+  font-size: 32px;
+  color: #000000;
+  animation: textneon 3s 0s infinite linear;
+}
+.visual .visual-title p:last-child {
+  font-weight: 700;
+  font-size: 24px;
+}
+
+/* #### Section - talk ####*/
+#talk {
+  background-color: rgba(105, 112, 248, 0.08);
+}
+#talk .talk-list {
+  opacity: 0;
+  transform: translateY(-100px);
+  transition: 1.5s;
+  margin: 80px 0;
+  -moz-columns: 4;
+       columns: 4;
+  gap: 24px;
+}
+#talk .talk-list.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+#talk .talk-list .postit {
+  display: inline-block;
+  width: 100%;
+  -moz-column-break-inside: avoid;
+       break-inside: avoid;
+  background-color: #ffffff;
+  border: 1px solid #004C97;
+  border-radius: 10px;
+  margin-bottom: 24px;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
+  padding: 24px;
+  text-align: left;
+}
+#talk .talk-list .postit a {
+  text-decoration: none;
+  color: #191919;
+}
+#talk .talk-list .postit a h3 {
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 16px;
+}
+#talk .talk-list .postit a div {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+}
+#talk .talk-list .postit a div .nickname {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4px;
+}
+#talk .talk-list .postit a p {
+  margin-top: 24px;
+}
+#talk .btn-talk {
+  text-decoration: none;
+  color: #ffffff;
+  font-family: "GmarketSansMedium";
+  font-weight: 500;
+  border-radius: 10px;
+  padding: 24px;
+  outline: none;
+  position: relative;
+  border: none;
+  cursor: pointer;
+  background: rgb(0, 0, 0);
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.979) 0%, rgba(0, 0, 0, 0.747) 100%);
+}
+#talk .btn-talk:hover {
+  color: #000000;
+  background: transparent;
+  box-shadow: none;
+}
+#talk .btn-talk:before, #talk .btn-talk:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 2px;
+  width: 0;
+  background: #000000;
+  box-shadow: -1px -1px 5px 0px #fff, 7px 7px 20px 0px rgba(0, 0, 0, 0.2), 4px 4px 5px 0px rgba(0, 0, 0, 0.1333333333);
+  transition: 400ms ease all;
+}
+#talk .btn-talk:after {
+  right: inherit;
+  top: inherit;
+  left: 0;
+  bottom: 0;
+}
+#talk .btn-talk:hover:before, #talk .btn-talk:hover:after {
+  width: 100%;
+  transition: 800ms ease all;
+}
+
+/* #### Section - job ####*/
+#job .job-list {
+  opacity: 0;
+  transition: 0.8s;
+  transform: translateX(-100%);
+}
+#job .job-list.active {
+  opacity: 1;
+  transform: translateX(0);
+}
+#job .job-list .select-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  margin: 80px 0;
+}
+#job .job-list .select-box select {
+  text-align: center;
+  width: 448px;
+  height: 94px;
+  font-size: 16px;
+  outline: none;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  -webkit-appearance: none; /* 크롬 화살표 없애기 */
+  -moz-appearance: none; /* 파이어폭스 화살표 없애기 */
+  appearance: none; /* 화살표 없애기 */
+  background-image: url("../img/select-icon.png");
+  background-repeat: no-repeat;
+  background-size: 24px 18px;
+  background-position: right 24px center;
+}
+
+/* #### Section - event ####*/
+#event .event-list {
+  margin-top: 80px;
+  position: relative;
+}
+#event .event-list .swiper-container {
+  max-width: calc(100% - 24px - 200px);
+  overflow: hidden;
+  margin: 0 auto;
+}
+#event .event-list .swiper-container .event-slider {
+  max-width: calc(100% - 24px - 100px);
+  aspect-ratio: 16/9;
+}
+#event .event-list .swiper-container .event-slider img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+#event .event-list .swiper-navigation .swiper-button-next {
+  background-image: url("../img/arrow-right-icon.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  width: 40px;
+  height: 65px;
+  right: 0;
+}
+#event .event-list .swiper-navigation .swiper-button-next:after {
+  display: none;
+}
+#event .event-list .swiper-navigation .swiper-button-prev {
+  background-image: url("../img/arrow-left-icon.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  width: 40px;
+  height: 65px;
+  left: 0;
+}
+#event .event-list .swiper-navigation .swiper-button-prev:after {
+  display: none;
+}
+
+/* #### Section - banner ####*/
+#banner .banner {
+  width: 100%;
+  height: 318px;
+  background-image: url("../img/banner.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  position: relative;
+}
+#banner .banner .banner-text {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  font-family: "GmarketSansMedium";
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 120%;
+  text-align: center;
+  color: #ffffff;
+}
+
+/* #### Footer ####*/
+#footer {
+  width: 100%;
+  background-color: #000000;
+  color: #ffffff;
+  font-size: 12px;
+}
+#footer .footer {
+  display: flex;
+  align-items: last baseline;
+  justify-content: space-between;
+  padding: 80px 24px 40px 24px;
+}
+#footer .footer .left {
+  text-align: left;
+}
+#footer .footer .left h2 {
+  font-size: 16px;
+  margin: 16px 0;
+}
+#footer .footer .left dl {
+  display: flex;
+  justify-content: flex-start;
+  gap: 16px;
+}
+#footer .footer .left dl dt {
+  min-width: 65px;
+}
+#footer .footer .right {
+  text-align: right;
+}
+.sns, .fnq, .info {
+  display: flex;
+  justify-content: flex-end;
+  gap: 16px;
+}
+
+#footer .footer .right .sns a {
+  width: 40px;
+  height: 40px;
+}
+#footer .footer .right .sns a img {
+  width: 100%;
+}
+#footer .footer .right .fnq {
+  margin-top: 24px;
+}
+#footer .footer .right .fnq .badge {
+  text-decoration: none;
+}
+#footer .footer .right .info {
+  margin: 16px 0;
+}
+#footer .footer .right .info a {
+  padding: 8px 24px;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+@media (min-width: 768px) and (max-width: 1438px) {
+  /* #### 공통 영역 스타일 #### */
+  body {
+    font-size: 14px;
+  }
+  .wrap {
+    padding: 80px 16px;
+  }
+  .title {
+    font-size: 22px;
+  }
+  .sub-title {
+    font-size: 18px;
+  }
+  .badge {
+    padding: 2px 8px;
+    font-size: 10px;
+  }
+  .logo {
+    width: 140px;
+  }
+  .logo img {
+    width: 100%;
+  }
+  /* 검색창 영역 */
+  form {
+    width: 320px;
+  }
+  form .search-txt {
+    width: 320px;
+  }
+  /* #### 헤더 영역 CSS ####*/
+  #header {
+    position: relative;
+  }
+  #header .header {
+    height: 72px;
+    padding: 16px;
+  }
+  #header .header .menu {
+    gap: 16px;
+  }
+  #header .header .menu li {
+    padding: 8px 16px;
+  }
+  #header .header .login {
+    gap: 16px;
+  }
+  #header .header .login a {
+    padding: 8px 16px;
+  }
+  /* #### Section - visual ####*/
+  .visual {
+    height: calc(100vh - 72px);
+    padding: 0;
+  }
+  .visual .visual-title p {
+    font-family: "GmarketSansMedium";
+    line-height: 120%;
+  }
+  .visual .visual-title p:first-child {
+    font-size: 28px;
+  }
+  .visual .visual-title p:last-child {
+    font-size: 22px;
+  }
+  /* #### Section - talk ####*/
+  #talk .talk-list {
+    -moz-columns: 3;
+         columns: 3;
+    gap: 16px;
+  }
+  #talk .talk-list .postit {
+    padding: 16px;
+  }
+  #talk .talk-list .postit a h3 {
+    font-size: 18px;
+    margin-bottom: 8px;
+  }
+  #talk .talk-list .postit a div {
+    gap: 8px;
+    font-size: 12px;
+  }
+  #talk .talk-list .postit a div .nickname img {
+    width: 16px;
+    height: 16px;
+  }
+  #talk .talk-list .postit a p {
+    margin-top: 16px;
+  }
+  #talk .btn-talk {
+    padding: 16px;
+  }
+  /* #### Section - job ####*/
+  #job .job-list .select-box {
+    gap: 16px;
+  }
+  #job .job-list .select-box select {
+    text-align: center;
+    width: 320px;
+    height: 67px;
+    font-size: 14px;
+  }
+  /* #### Section - event ####*/
+  #event .event-list .swiper-container {
+    max-width: calc(100% - 16px - 160px);
+  }
+  #event .event-list .swiper-container .event-slider {
+    max-width: calc(100% - 16px - 80px);
+  }
+  #event .event-list .swiper-navigation .swiper-button-next {
+    width: 28px;
+    height: 43px;
+  }
+  #event .event-list .swiper-navigation .swiper-button-prev {
+    width: 28px;
+    height: 43px;
+  }
+  /* #### Section - banner ####*/
+  #banner .banner {
+    height: 280px;
+  }
+  #banner .banner .banner-text {
+    font-size: 28px;
+  }
+  /* #### Footer ####*/
+  #footer {
+    font-size: 10px;
+  }
+  #footer .footer {
+    padding: 80px 16px 40px 16px;
+  }
+  #footer .footer .left h2 {
+    font-size: 14px;
+    margin: 8px 0;
+  }
+  #footer .footer .right {
+    text-align: right;
+  }
+  #footer .footer .right .sns a {
+    width: 32px;
+    height: 32px;
+  }
+  #footer .footer .right .info {
+    margin: 8px 0;
+  }
+  #footer .footer .right .info a {
+    padding: 8px 16px;
+  }
+}
+@media (min-width: 375px) and (max-width: 766px) {
+  /* #### 공통 영역 스타일 #### */
+  body {
+    font-size: 14px;
+  }
+  .wrap {
+    padding: 80px 16px;
+  }
+  .title {
+    font-size: 22px;
+  }
+  .sub-title {
+    font-size: 18px;
+  }
+  .badge {
+    padding: 2px 8px;
+    font-size: 10px;
+  }
+  .logo {
+    width: 100px;
+  }
+  .logo img {
+    width: 100%;
+  }
+  /* 검색창 영역 */
+  form {
+    width: 220px;
+  }
+  form .search-txt {
+    width: 220px;
+  }
+  form .btn-search {
+    width: 20px;
+    height: 20px;
+  }
+  /* #### 헤더 영역 CSS ####*/
+  #header {
+    position: relative;
+  }
+  #header .header {
+    height: 68px;
+    padding: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  #header .header nav, #header .header .login {
+    display: none;
+  }
+  #header .header .drawer {
+    display: block;
+    width: 24px;
+    height: 20px;
+    position: relative;
+  }
+  #header .header .drawer span {
+    width: 100%;
+    height: 1px;
+    background-color: #ffffff;
+    display: inline-block;
+  }
+  #header .header .drawer span:nth-child(1) {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  #header .header .drawer span:nth-child(2) {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 90%;
+  }
+  #header .header .drawer span:nth-child(3) {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+  #header .mobile-nav {
+    display: block;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 70%;
+    min-height: 100vh;
+    background-color: #ffffff;
+    z-index: 1000;
+    transition: 0.3s;
+    opacity: 0;
+    visibility: hidden;
+  }
+  #header .mobile-nav.active {
+    opacity: 1;
+    visibility: visible;
+  }
+  #header .mobile-nav .drawer-x {
+    display: block;
+    width: 24px;
+    height: 20px;
+    position: absolute;
+    top: 24px;
+    right: 24px;
+  }
+  #header .mobile-nav .drawer-x span {
+    width: 100%;
+    height: 1px;
+    background-color: #ffffff;
+    display: inline-block;
+  }
+  #header .mobile-nav .drawer-x span:nth-child(1) {
+    position: absolute;
+    transform: rotate(45deg) translateY(-50%);
+    top: 50%;
+  }
+  #header .mobile-nav .drawer-x span:nth-child(2) {
+    position: absolute;
+    display: none;
+  }
+  #header .mobile-nav .drawer-x span:nth-child(3) {
+    position: absolute;
+    transform: rotate(-45deg) translateY(-50%);
+    top: 50%;
+  }
+  #header .mobile-nav .mobile-login {
+    background-color: #004C97;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 0 20px 0;
+  }
+  #header .mobile-nav .mobile-login .profile-img {
+    width: 60px;
+    height: 60px;
+  }
+  #header .mobile-nav .mobile-login .profile-img img {
+    width: 100%;
+  }
+  #header .mobile-nav .mobile-login .profile-text {
+    color: #ffffff;
+    margin-top: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+  }
+  #header .mobile-nav .mobile-login .profile-text .badge {
+    font-size: 10px;
+    border: 1px solid #ffffff;
+  }
+  #header .mobile-nav ul li {
+    text-align: center;
+    padding: 16px;
+    border-bottom: 1px solid #B0B0B0;
+    transition: 0.3s;
+  }
+  #header .mobile-nav ul li:hover {
+    background-color: rgba(105, 112, 248, 0.08);
+  }
+  #header .mobile-nav ul li a {
+    display: block;
+    text-decoration: none;
+    color: #191919;
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+  /* #### Section - visual ####*/
+  .visual {
+    height: calc(100vh - 72px);
+    padding: 0;
+  }
+  .visual .visual-title {
+    transform: translateY(100px);
+  }
+  .visual .visual-title p:first-child {
+    font-size: 22px;
+  }
+  .visual .visual-title p:last-child {
+    font-size: 18px;
+  }
+  /* #### Section - talk ####*/
+  #talk .talk-list {
+    margin: 40px 0;
+    -moz-columns: 1;
+         columns: 1;
+    gap: 16px;
+  }
+  #talk .talk-list .postit {
+    padding: 16px;
+  }
+  #talk .talk-list .postit a h3 {
+    font-size: 18px;
+    margin-bottom: 8px;
+  }
+  #talk .talk-list .postit a div {
+    gap: 8px;
+    font-size: 12px;
+  }
+  #talk .talk-list .postit a div .nickname img {
+    width: 16px;
+    height: 16px;
+  }
+  #talk .talk-list .postit a p {
+    margin-top: 16px;
+  }
+  #talk .btn-talk {
+    padding: 16px;
+  }
+  /* #### Section - job ####*/
+  #job .job-list {
+    margin: 40px 0;
+  }
+  #job .job-list .select-box {
+    gap: 16px;
+    margin: 40px 0;
+  }
+  #job .job-list .select-box select {
+    text-align: center;
+    width: 320px;
+    height: 67px;
+    font-size: 14px;
+    background-size: 14px 8px;
+    background-position: right 16px center;
+  }
+  /* #### Section - event ####*/
+  #event .event-list {
+    margin: 40px 0;
+  }
+  #event .event-list .swiper-container {
+    min-width: calc(100% - 80px);
+  }
+  #event .event-list .swiper-container .event-slider {
+    max-width: 100%;
+  }
+  #event .event-list .swiper-navigation .swiper-button-next {
+    width: 24px;
+    height: 39px;
+  }
+  #event .event-list .swiper-navigation .swiper-button-prev {
+    width: 24px;
+    height: 39px;
+  }
+  /* #### Section - banner ####*/
+  #banner .banner {
+    height: 280px;
+  }
+  #banner .banner .banner-text {
+    font-size: 18px;
+    padding: 0 16px;
+  }
+  /* #### Footer ####*/
+  #footer {
+    font-size: 10px;
+  }
+  #footer .footer {
+    padding: 80px 16px 40px 16px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+  }
+  #footer .footer .left {
+    text-align: center;
+  }
+  #footer .footer .left .logo {
+    margin: 0 auto;
+  }
+  #footer .footer .left h2 {
+    font-size: 14px;
+    margin: 8px 0;
+  }
+  #footer .footer .left dl {
+    gap: 8px;
+    margin: 0 auto;
+  }
+  #footer .footer .right {
+    text-align: center;
+  }
+  #footer .footer .right .sns {
+    justify-content: center;
+  }
+  #footer .footer .right .sns a {
+    width: 24px;
+    height: 24px;
+  }
+  #footer .footer .right .fnq {
+    justify-content: center;
+  }
+  #footer .footer .right .info {
+    margin: 8px 0;
+  }
+  #footer .footer .right .info a {
+    padding: 8px 16px;
+  }
+}
+/* #### 애니메이션 #### */
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg) scale(1.2);
+  }
+  33% {
+    transform: rotate(-10deg) scale(1.2);
+  }
+  66% {
+    transform: rotate(10deg) scale(1.2);
+  }
+  100% {
+    transform: rotate(0deg) scale(1.2);
+  }
+}
+@keyframes searchani {
+  0% {
+    width: 0%;
+    background-color: #191919;
+    box-shadow: 1px 2px 2px rgba(67, 162, 255, 0.2);
+  }
+  100% {
+    width: 100%;
+    background-color: #191919;
+    box-shadow: 1px 2px 2px rgba(67, 162, 255, 0.2);
+  }
+}
+@keyframes searchbtn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes textneon {
+  0% {
+    text-shadow: 0px 3px 20px rgba(56, 66, 246, 0.08), 0 0 20px #004C97;
+  }
+  50% {
+    text-shadow: 0px 3px 20px rgba(56, 66, 246, 0.08), 0 0 40px #004C97;
+  }
+  100% {
+    text-shadow: 0px 3px 20px rgba(56, 66, 246, 0.08), 0 0 20px #004C97;
+  }
+}
