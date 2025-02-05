@@ -228,33 +228,40 @@ form .btn-search {
 .visual {
   padding: 0;
   width: 100%;
-  min-height: calc(100vh - 81px);
+  height: calc(100vh - 81px);
   background-image: url("../img/main-bg.png");
-  background-position: center center;
+  background-position: center;
   background-repeat: no-repeat;
   background-size: 100% 100%;
   display: flex;
   justify-content: center;
 }
 .visual .visual-title {
-  transform: translateY(220.5px);
+  transform: translateY(80px);
   display: flex;
+  align-items: center;
   flex-direction: column;
-  gap: 40px;
+  gap: 24px;
 }
-.visual .visual-title p {
-  font-family: "GmarketSansMedium";
-  line-height: 120%;
+.visual .visual-title .bg-img {
+  width: 200px;
+  top: 100px;
 }
-.visual .visual-title p:first-child {
+.visual .visual-title .bg-img img {
+  width: 100%;
+}
+.visual .visual-title .main-txt {
   font-weight: 700;
   font-size: 32px;
   color: #000000;
+  font-family: "GmarketSansMedium";
+  line-height: 120%;
   animation: textneon 3s 0s infinite linear;
 }
-.visual .visual-title p:last-child {
-  font-weight: 700;
-  font-size: 24px;
+.visual .visual-title .sub-txt {
+  font-size: 20px;
+  font-family: "GmarketSansMedium";
+  line-height: 120%;
 }
 
 /* #### Section - talk ####*/
@@ -526,10 +533,10 @@ form .btn-search {
     padding: 80px 16px;
   }
   .title {
-    font-size: 22px;
+    font-size: 20px;
   }
   .sub-title {
-    font-size: 18px;
+    font-size: 16px;
   }
   .badge {
     padding: 2px 8px;
@@ -573,15 +580,17 @@ form .btn-search {
     height: calc(100vh - 72px);
     padding: 0;
   }
-  .visual .visual-title p {
-    font-family: "GmarketSansMedium";
-    line-height: 120%;
+  .visual .visual-title {
+    gap: 24px;
   }
-  .visual .visual-title p:first-child {
-    font-size: 28px;
+  .visual .visual-title .bg-img {
+    width: 180px;
   }
-  .visual .visual-title p:last-child {
-    font-size: 22px;
+  .visual .visual-title .main-txt {
+    font-size: 24px;
+  }
+  .visual .visual-title .sub-txt {
+    font-size: 16px;
   }
   /* #### Section - talk ####*/
   #talk .talk-list {
@@ -640,7 +649,7 @@ form .btn-search {
     height: 280px;
   }
   #banner .banner .banner-text {
-    font-size: 28px;
+    font-size: 24px;
   }
   /* #### Footer ####*/
   #footer {
@@ -676,10 +685,10 @@ form .btn-search {
     padding: 80px 16px;
   }
   .title {
-    font-size: 22px;
+    font-size: 20px;
   }
   .sub-title {
-    font-size: 18px;
+    font-size: 16px;
   }
   .badge {
     padding: 2px 8px;
@@ -840,13 +849,17 @@ form .btn-search {
     padding: 0;
   }
   .visual .visual-title {
-    transform: translateY(100px);
+    transform: translateY(40px);
+    gap: 16px;
   }
-  .visual .visual-title p:first-child {
-    font-size: 22px;
+  .visual .visual-title .bg-img {
+    width: 160px;
   }
-  .visual .visual-title p:last-child {
-    font-size: 18px;
+  .visual .visual-title .main-txt {
+    font-size: 24px;
+  }
+  .visual .visual-title .sub-txt {
+    font-size: 16px;
   }
   /* #### Section - talk ####*/
   #talk .talk-list {
@@ -915,7 +928,7 @@ form .btn-search {
     height: 280px;
   }
   #banner .banner .banner-text {
-    font-size: 18px;
+    font-size: 16px;
     padding: 0 16px;
   }
   /* #### Footer ####*/

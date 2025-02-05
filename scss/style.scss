@@ -154,31 +154,38 @@ form {
 .visual {
     padding: 0;
     width: 100%;
-    min-height: calc(100vh - 81px);
+    height: calc(100vh - 81px);
     background-image: url("../img/main-bg.png");
-    background-position: center center;
+    background-position: center;
     background-repeat: no-repeat;
     background-size: 100% 100%;
     display: flex;
     justify-content: center;
     .visual-title {
-        transform: translateY(220.5px);
+        transform: translateY(80px);
         display: flex;
+        align-items: center;
         flex-direction: column;
-        gap: 40px;
-        p {
+        gap: 24px;
+        .bg-img {
+            width: 200px;
+            top: 100px;
+            img {
+                width: 100%;
+            }
+        }
+        .main-txt {
+            font-weight: $weight-700;
+            font-size: $title-point-big;
+            color: $black;
             font-family: $sub-font;
             line-height: $title-line-height;
-            &:first-child {
-                font-weight: $weight-700;
-                font-size: $title-point-big;
-                color: $black;
-                animation: textneon 3s 0s infinite linear;
-            }
-            &:last-child {
-                font-weight: $weight-700;
-                font-size: $title-point-mid;
-            }
+            animation: textneon 3s 0s infinite linear;
+        }
+        .sub-txt {
+            font-size: $title-point-small;
+            font-family: $sub-font;
+            line-height: $title-line-height;
         }
     }
 }
@@ -509,15 +516,15 @@ form {
         height: calc(100vh - 72px);
         padding: 0;
         .visual-title {
-            p {
-                font-family: $sub-font;
-                line-height: $title-line-height;
-                &:first-child {
-                    font-size: $title-point-big-tablet;
-                }
-                &:last-child {
-                    font-size: $title-point-mid-tablet;
-                }
+            gap: 24px;
+            .bg-img {
+                width: 180px;
+            }
+            .main-txt {
+                font-size: $title-point-big-tablet;
+            }
+            .sub-txt {
+                font-size: $title-point-small-tablet;
             }
         }
     }
@@ -801,14 +808,16 @@ form {
         height: calc(100vh - 72px);
         padding: 0;
         .visual-title {
-            transform: translateY(100px);
-            p {
-                &:first-child {
-                    font-size: $title-point-mid-tablet;
-                }
-                &:last-child {
-                    font-size: $title-point-small-tablet;
-                }
+            transform: translateY(40px);
+            gap: 16px;
+            .bg-img {
+                width: 160px;
+            }
+            .main-txt {
+                font-size: $title-point-big-tablet;
+            }
+            .sub-txt {
+                font-size: $title-point-small-tablet;
             }
         }
     }
