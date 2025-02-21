@@ -316,8 +316,13 @@ form .btn-search {
   justify-content: space-between;
   gap: 4px;
 }
-#talk .talk-list .postit a p {
-  margin-top: 24px;
+#talk .talk-list .postit a .text {
+  margin-top: 16px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
 }
 #talk .btn-talk {
   text-decoration: none;
@@ -392,6 +397,8 @@ form .btn-search {
   background-repeat: no-repeat;
   background-size: 24px 18px;
   background-position: right 24px center;
+  color: #000000;
+  background-color: #ffffff;
 }
 
 /* #### Section - event ####*/
@@ -577,7 +584,6 @@ form .btn-search {
   }
   /* #### Section - visual ####*/
   .visual {
-    height: calc(100vh - 72px);
     padding: 0;
   }
   .visual .visual-title {
@@ -845,7 +851,7 @@ form .btn-search {
   }
   /* #### Section - visual ####*/
   .visual {
-    height: calc(100vh - 72px);
+    height: calc(var(--vh, 1vh) * 100);
     padding: 0;
   }
   .visual .visual-title {

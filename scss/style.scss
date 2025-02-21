@@ -235,8 +235,13 @@ form {
                         gap: 4px;
                     }
                 }
-                p {
-                    margin-top: 24px;
+                .text {
+                    margin-top: 16px;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    display: -webkit-box;
+                    -webkit-line-clamp: 3;
+                    -webkit-box-orient: vertical;
                 }
             }
         }
@@ -287,6 +292,7 @@ form {
         }
     }
 }
+
 /* #### Section - job ####*/
 #job {
     .job-list {
@@ -318,6 +324,8 @@ form {
                 background-repeat: no-repeat;
                 background-size: 24px 18px;
                 background-position: right 24px center;
+                color: $black;
+                background-color: $white;
             }
         }
     }
@@ -513,7 +521,6 @@ form {
 
     /* #### Section - visual ####*/
     .visual {
-        height: calc(100vh - 72px);
         padding: 0;
         .visual-title {
             gap: 24px;
@@ -805,7 +812,7 @@ form {
 
     /* #### Section - visual ####*/
     .visual {
-        height: calc(100vh - 72px);
+        height: calc(var(--vh, 1vh) * 100);
         padding: 0;
         .visual-title {
             transform: translateY(40px);

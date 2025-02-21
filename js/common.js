@@ -1,5 +1,14 @@
 console.log('[common.js] loaded!');
 
+/* 모바일 100vh 속성 스크롤 문제 해결 */
+function setScreenSize() {
+    let vh = window.innerHeight * 0.01;
+  
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
+  }
+  
+setScreenSize();
+
 const eventSlider = new Swiper('.event-list .swiper-container', {
     centeredSlides: false, // 1번 슬라이드가 가운데 보이기
     loop: true, // 반복재생
